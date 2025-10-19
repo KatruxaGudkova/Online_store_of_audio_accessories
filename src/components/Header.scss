@@ -1,0 +1,31 @@
+header {
+    background: #eaeaea;
+    margin: 0 165px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+  
+    .logo {
+      cursor: pointer;
+    }
+  
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  
+      img {
+        width: 24px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  
