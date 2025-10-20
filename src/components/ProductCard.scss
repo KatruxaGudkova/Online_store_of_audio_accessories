@@ -1,7 +1,7 @@
 .product-card {
     background: #fff;
     border-radius: 30px;
-    padding: 22px;
+    padding: 22px 22px 33px 22px;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -14,7 +14,35 @@
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     }
   
-    img {
+
+
+     /* --- Нижняя часть карточки --- */
+  .product-info {
+    position: relative; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; // расстояние между названием и рейтингом
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 25px; // расстояние между ценой и кнопкой
+  }
+  .has-old-price .right {
+    gap: calc(25px - 13px); // 13px — примерная высота старой цены
+  }
+
+
+  .image {
       width: 219.61px;
       height: 237.07px;
       object-fit: contain;
@@ -24,16 +52,36 @@
     h3 {
       font-size: 17px;
       font-weight: 600;
-      margin: 10px 0;
-      text-align: center;
+      margin: 0;
       color: #1C1C27;
+    }
+
+    .star-icon {
+      width: 23.33px;
+      height: 21.93px;
+    }
+
+    .rating {
+      display: flex;
+      // align-items: center;
+      flex-direction: row; 
+      font-size: 17px;
+      color: #838383;
+      font-weight: 600;
+      gap: 10px; /* расстояние между звездочкой и числом */
+    }
+  
+    .price-wrapper {
+      display: flex;
+      flex-direction: column; /* теперь цена и старая цена идут вертикально */
+      align-items: center; 
+      line-height: 1; /* убираем лишние промежутки */
     }
   
     .price {
       color: #FFA542;
       font-weight: 600;
       font-size: 17px;
-      margin-bottom: 8px;
     }
   
     .old-price {
@@ -41,22 +89,26 @@
       font-size: 13px;
       font-weight: 600;
       text-decoration: line-through;
-      margin-left: 8px;
+      margin-top: 0; /* чтобы не было отступа */
     }
   
     button {
+      position: absolute;   
+      right: 0; 
+      bottom: 0;
       background-color: #fff;
       color: #000000;
       border: none;
       border-radius: 8px;
-      padding: 8px 20px;
+      // padding: 8px 20px;
       font-weight: 600;
       font-size: 17px;
       cursor: pointer;
       transition: background 0.2s ease;
   
       &:hover {
-        background-color: #FFA542;
+        // background-color: #FFA542;
+        color: #FFA542;
       }
     }
   }
