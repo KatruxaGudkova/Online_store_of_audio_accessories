@@ -1,9 +1,13 @@
+html, body, #root {
+  height: 100%; /* важно: чтобы flex работал от всего окна */
+  margin: 0;
+}
 .App {
-  font-family: sans-serif;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* чтобы растягивалась на весь экран */
 }
 body {
-  /* font-family: "Montserrat", sans-serif; */
   background-color: #eaeaea;
 }
 * {
@@ -11,4 +15,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.main-content{
+  flex: 1; /* занимает всё оставшееся место */
 }

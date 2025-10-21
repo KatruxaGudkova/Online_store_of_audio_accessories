@@ -1,0 +1,107 @@
+footer {
+
+    .footer-container {
+        
+      width: 100%;
+      background-color: #eaeaea;
+      display: flex;
+      justify-content: center; // центрируем контент
+    }
+  
+    .footer-content {
+      background-color: #ffffff;
+      border-radius: 30px 30px 0 0;
+      box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: calc(100% - 364px); // то же, что padding 0 182px
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px 30px; 
+    }
+  
+    .footer-logo {
+      font-weight: 700;
+      font-size: 25px;
+      color: #101010;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        margin-bottom: 10px;
+  
+        a {
+          text-decoration: none;
+          color: #101010;
+          font-size: 17px;
+          font-weight: 500;
+          transition: color 0.2s ease;
+  
+          &:hover {
+            color: #ffa542;
+          }
+        }
+      }
+    }
+  
+    .footer-policy {
+      li {
+        color: #838383;
+        font-size: 14px;
+      }
+    }
+  
+    .footer-lang {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+  
+      img {
+        width: 20px;
+        height: 20px;
+      }
+  
+      .inactive {
+        color: #838383;
+      }
+    }
+  
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  
+      img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  
+    /* 📱 адаптивность */
+    @media (max-width: 1024px) {
+      .footer-content {
+        max-width: calc(100% - 120px); // уменьшенные боковые поля
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .footer-content {
+        max-width: calc(100% - 40px);
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+  
