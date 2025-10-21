@@ -1,5 +1,5 @@
 header {
-    background: #ffc0c0;
+    background: #eaeaea;
     margin: 0 165px;
     padding: 20px 0px;
     display: flex;
@@ -11,21 +11,59 @@ header {
     .logo {
       cursor: pointer;
     }
-  
-    .icons {
+
+    .navbar {
       display: flex;
-      align-items: center;
-      gap: 20px;
-  
-      img {
-        width: 24px;
-        cursor: pointer;
-        transition: transform 0.2s ease;
-  
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
+      // align-items: center;
+      justify-content: space-between;
+      align-items: flex-start;
     }
+
+    .navbar_favorite,
+    .navbar_basket {
+      position: relative;
+      padding: 15px;
+    }
+  
+    .favorite-icon{
+      width: 22px;
+      height: 20px;
+      cursor: pointer;
+    }
+    .basket-icon{
+      width: 23.2px;
+      height: 23.2px;
+      cursor: pointer;
+    }
+      
+    
+  // 🔸 кружочек-счётчик
+  .badge {
+    position: absolute;   // позиционируем относительно .navbar_favorite
+    top: 10px;            // немного выше иконки
+    right: 6px;          // сдвигаем чуть правее
+    background: #ffa542;  // жёлтый, как в макете
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    width: 17.4px;
+    height: 17.4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+    //   img {
+    //     width: 24px;
+    //     cursor: pointer;
+    //     transition: transform 0.2s ease;
+  
+    //     &:hover {
+    //       transform: scale(1.1);
+    //     }
+    //   }
+    // }
   }
   

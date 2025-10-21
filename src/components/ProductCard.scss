@@ -37,10 +37,6 @@
     align-items: flex-end;
     gap: 25px; // расстояние между ценой и кнопкой
   }
-  .has-old-price .right {
-    gap: calc(25px - 13px); // 13px — примерная высота старой цены
-  }
-
 
   .image {
       width: 219.61px;
