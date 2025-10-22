@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.scss";
 
 function Footer() {
@@ -11,23 +12,24 @@ function Footer() {
 
           <ul className="footer-links">
             <li>
-              <a href="#">Избранное</a>
+              <Link to="#">Избранное</Link>
             </li>
             <li>
-              <a href="/cart">Корзина</a>
+              <Link to="/cart">Корзина</Link>
             </li>
             <li>
-              <a href="#">Контакты</a>
+              <Link to="#">Контакты</Link>
             </li>
           </ul>
 
           <ul className="footer-policy">
             <li>
-              <a href="#">Условия сервиса</a>
+              <Link to="#">Условия сервиса</Link>
             </li>
             <li className="footer-lang">
               <img src="/images/lang.svg" alt="lang" />
-              <span className="active">Рус</span> <span className="inactive">Eng</span>
+              <span className="active">Рус</span>{" "}
+              <span className="inactive">Eng</span>
             </li>
           </ul>
 

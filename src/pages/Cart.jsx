@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
-function Cart() {
+function Cart({ setBasketCount }) {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const storedCart = JSON.parse(sessionStorage.getItem("cart")) || [];
     setCart(storedCart);
-  }, []);
+    setBasketCount(storedCart.length); // ✅ обновляем общий счётчик
+  }, [setBasketCount]);
 
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
