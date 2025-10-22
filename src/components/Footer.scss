@@ -26,6 +26,12 @@ footer {
       font-weight: 700;
       font-size: 25px;
       color: #101010;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   
     ul {
@@ -53,7 +59,7 @@ footer {
     .footer-policy {
       li {
         color: #838383;
-        font-size: 14px;
+        font-size: 15px;
       }
     }
   
@@ -69,6 +75,10 @@ footer {
   
       .inactive {
         color: #838383;
+      }
+        
+      .active {
+        color: #ffa542;
       }
     }
   

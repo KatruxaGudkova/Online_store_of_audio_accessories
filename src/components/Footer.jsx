@@ -14,7 +14,7 @@ function Footer() {
               <a href="#">Избранное</a>
             </li>
             <li>
-              <a href="#">Корзина</a>
+              <a href="/cart">Корзина</a>
             </li>
             <li>
               <a href="#">Контакты</a>
@@ -27,7 +27,7 @@ function Footer() {
             </li>
             <li className="footer-lang">
               <img src="/images/lang.svg" alt="lang" />
-              <span>Рус</span> <span className="inactive">Eng</span>
+              <span className="active">Рус</span> <span className="inactive">Eng</span>
             </li>
           </ul>
 
